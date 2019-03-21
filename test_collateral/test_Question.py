@@ -39,6 +39,16 @@ class test_Question(unittest.TestCase):
                 found_no = True
         self.assertTrue(found_yes and found_no and found_test)
 
+        # check to make sure constructed answer addition works
+        my_fake_answer = Answer.Answer()
+        my_fake_answer.answer_text = "hello amigos"
+        my_fake_answer.set_one_char_encoding('D')
+        self.assertTrue(my_question.add_constructed_answer(my_fake_answer))
+        self.assertEqual(len(my_question.answer_map), 4)
+        self.assertEqual(my_question.answer_map["D"].answer_text, "hello amigos")
+
+
+
 
 if __name__ == '__main__':
     unittest.main()

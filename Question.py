@@ -18,6 +18,15 @@ class Question:
         self.answer_order.append(answer_encoding)
         return True
 
+    def add_constructed_answer(self, answer):
+        answer_encoding = answer.answer_encoding
+        if self.answer_encoding_exists(answer_encoding):
+            return False
+        self.answer_map[answer_encoding] = answer
+        self.answer_order.append(answer_encoding)
+        return True
+
+
     def get_answer_list(self):
         output_list = []
         if self.preserve_answer_order:
@@ -39,5 +48,6 @@ class Question:
         self.answer_map = {}
         self.preserve_answer_order = preserve_answer_order
         self.answer_order = []
+        self.question_number = -1
 
 

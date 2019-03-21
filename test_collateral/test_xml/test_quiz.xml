@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<quiz>
+    <question>
+        <text>Why is the sky blue?</text>
+        <number>1</number>
+        <answer>
+            <text>Because it's beautiful</text>
+            <encoding>A</encoding>
+        </answer>
+        <answer>
+            <text>It's not. It's actually hideous.</text>
+            <encoding>B</encoding>
+        </answer>
+    </question>
+    <question>
+        <text>Is the cup half full or half empty?</text>
+        <number>2</number>
+        <answer>
+            <text>Full</text>
+            <encoding>A</encoding>
+        </answer>
+        <answer>
+            <text>Empty</text>
+            <encoding>B</encoding>
+        </answer>
+    </question>
+    <result>
+        <text>Optimist</text>
+        <sequence>AA</sequence>
+    </result>
+    <result>
+        <text>Pessimist</text>
+        <sequence>BB</sequence>
+    </result>
+    <result>
+        <text>In-Between</text>
+        <sequence>AB</sequence>
+        <sequence>BA</sequence>
+    </result>
+</quiz>

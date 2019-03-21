@@ -11,10 +11,5 @@ class test_Answer(unittest.TestCase):
         self.assertEqual(my_answer.set_one_char_encoding("adsj"), False)
         self.assertEqual(my_answer.answer_encoding, "2")
 
-    def test_serialize(self):
-        my_answer = Answer()
-        my_answer.answer_text = "ridiculous"
-        my_answer.set_one_char_encoding("2")
-
 if __name__ == '__main__':
     unittest.main()
