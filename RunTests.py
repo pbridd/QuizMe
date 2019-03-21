@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import unittest
 loader = unittest.TestLoader()
 start_dir = 'test_collateral/'
