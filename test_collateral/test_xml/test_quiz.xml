@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <quiz>
+    <text>Optimist or Pessimist?</text>
     <question>
         <text>Why is the sky blue?</text>
         <number>1</number>

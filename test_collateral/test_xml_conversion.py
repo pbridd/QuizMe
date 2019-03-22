@@ -23,6 +23,19 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(question_object.question_number, 1)
         self.assertEqual(len(question_object.answer_map), 2)
 
+    def test_convert_quiz(self):
+        quiz_xml = self.test_tree_root
+        quiz_object = xml_conversion.xml_to_quiz(quiz_xml)
+        self.assertEqual(quiz_object.quiz_name, "Optimist or Pessimist?")
+        self.assertEqual(len(quiz_object.question_map), 2)
+        self.assertEqual(quiz_object.question_map[1].question_text, "Why is the sky blue?")
+        self.assertEqual(quiz_object.question_map[2].question_text, "Is the cup half full or half empty?")
+        self.assertEqual(quiz_object.question_map[1].answer_map["A"].answer_text,
+                         "Because it's beautiful")
+        self.assertEqual(quiz_object.question_map[1].answer_map["B"].answer_text,
+                         "It's not. It's actuall"
+                         "y hideous.")
+
 
 if __name__ == '__main__':
     unittest.main()

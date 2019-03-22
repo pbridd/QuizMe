@@ -26,7 +26,6 @@ class Question:
         self.answer_order.append(answer_encoding)
         return True
 
-
     def get_answer_list(self):
         output_list = []
         if self.preserve_answer_order:
